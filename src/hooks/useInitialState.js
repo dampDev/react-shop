@@ -1,12 +1,13 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 const initialState = {
     cart: [],
 }
 
-const useInitialState = ()=> {
-    const [state, setState]= useState(initialState);
-    const addToCar = (payload)=> {
+const useInitialState = () => {
+    const [state, setState] = useState( initialState);
+    
+    const addToCart = (payload) => {
         setState({
             ...state,
             cart:[...state.cart, payload]
@@ -14,7 +15,8 @@ const useInitialState = ()=> {
     };
     return{
         state,
-        addToCar
+        addToCart
     }
 }
-export default useInitialState;
+export default useInitialState; 
+
